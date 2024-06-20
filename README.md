@@ -2,6 +2,8 @@
 
 <a href='https://shallowdream204.github.io/soda-sr-project/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>  <a href='https://arxiv.org/pdf/2303.17783'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
 
+This repository is an official PyTorch implementation of the paper [Uncertainty-Aware Source-Free Adaptive Image Super-Resolution with Wavelet Augmentation Transformer](https://openaccess.thecvf.com/content/CVPR2024/papers/Ai_Uncertainty-Aware_Source-Free_Adaptive_Image_Super-Resolution_with_Wavelet_Augmentation_Transformer_CVPR_2024_paper.pdf).
+
 [Yuang Ai](https://scholar.google.com/citations?user=2Qp7Y5kAAAAJ)<sup>1,2</sup>, [Xiaoqiang Zhou](https://scholar.google.com/citations?user=Z2BTkNIAAAAJ)<sup>1,3</sup>, [Huaibo Huang](https://scholar.google.com/citations?user=XMvLciUAAAAJ)<sup>1,2</sup>, [Lei Zhang](https://scholar.google.com/citations?user=tAK5l1IAAAAJ)<sup>4,5</sup>, [Ran He](https://scholar.google.com/citations?user=ayrg9AUAAAAJ)<sup>1,2,6</sup>
 
 <sup>1</sup>MAIS & CRIPAC, Institute of Automation, Chinese Academy of Sciences<br><sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences<br><sup>3</sup>University of Science and Technology of China <sup>4</sup>OPPO Research Institute<br><sup>5</sup>The Hong Kong Polytechnic University <sup>6</sup>ShanghaiTech University
