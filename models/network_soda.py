@@ -681,7 +681,7 @@ class AttentionLayer(nn.Module):
         self.attend = nn.Softmax(dim = -1)
         self.dropout = nn.Dropout(dropout)
 
-        self.to_qkv = nn.Linear(dim, dim * 3, bias = False)
+        self.to_qkv = nn.Linear(dim, dim * 3, bias = True)
 
         self.to_out = nn.Sequential(
             nn.Linear(dim, dim),
