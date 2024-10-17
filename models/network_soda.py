@@ -17,7 +17,7 @@ from typing import Optional
 from torch import Tensor
 import copy
 import random
-
+from torch.nn.init import normal_
 
 class Mlp(nn.Module):
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):
@@ -875,6 +875,14 @@ class WaveletAugLayer(nn.Module):
             self.wts.append(WaveletTransform(i,True))
             self.attns.append(AttentionLayer(dim,num_heads,dropout))
             self.iwts.append(WaveletTransform(i,False))
+            
+        self._reset_parameters()
+
+    def _reset_parameters(self):
+        for m in self.modules():
+            if isinstance(m, MSDeformAttn):
+                m._reset_parameters()
+        normal_(self.level_embed)
 
     def forward(self, x):
         #x:b,c,h,w
