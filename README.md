@@ -23,12 +23,20 @@ Visual Comparisons
 
 <img src="assets/results2.png" width="800px"/>
 
+## Evaluation
+You can download the pre-trained models from the [Hugginngface](https://huggingface.co/shallowdream204/SODA-SR/tree/main).
+
+   ```bash
+    python3 main_test_sodasr.py --task classical_sr --scale 4 \
+    --model_path ... --folder_lq ... --folder_gt ... --cuda 2 --save_name ...
+   ```
+
 
 ## Acknowledgement
 Our code is built upon [KAIR](https://github.com/cszn/KAIR), [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR) and [CDC](https://github.com/xiezw5/Component-Divide-and-Conquer-for-Real-World-Image-Super-Resolution). We thank the authors for their awesome work.
 
 ## Contact
-If you have any questions, please feel free to concat with me at `shallowdream555@gmail.com`.
+If you have any questions, please feel free to contact with me at `shallowdream555@gmail.com`.
 
 ## Citation
 
