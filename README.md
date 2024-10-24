@@ -24,7 +24,7 @@ Visual Comparisons
 <img src="assets/results2.png" width="800px"/>
 
 ## Evaluation
-You can download the pre-trained models from the [Hugginngface](https://huggingface.co/shallowdream204/SODA-SR/tree/main).
+You can download the pre-trained models from the [Huggingface](https://huggingface.co/shallowdream204/SODA-SR/tree/main).
 
    ```bash
     python3 main_test_sodasr.py --task classical_sr --scale 4 \
