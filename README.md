@@ -28,7 +28,7 @@ You can download the pre-trained models from the [Huggingface](https://huggingfa
 
    ```bash
     python3 main_test_sodasr.py --task classical_sr --scale 4 \
-    --model_path ... --folder_lq ... --folder_gt ... --cuda 2 --save_name ...
+    --model_path ... --folder_lq ... --folder_gt ... --cuda 0 --save_name ...
    ```
 
 
