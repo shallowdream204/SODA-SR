@@ -7,7 +7,7 @@ import os
 import torch
 import requests
 import lpips
-from models.network_soda import SwinIR as net
+from models.network_swinir import SwinIR as net
 from utils import utils_image as util
 
 
@@ -30,6 +30,7 @@ def main():
                         help='Tile size, None for no tile during testing (testing as a whole)')
     parser.add_argument('--tile_overlap', type=int, default=32, help='Overlapping of different tiles')
     parser.add_argument('--cuda', type=int, default=0, help='Cuda id')
+    parser.add_argument('--save_name', type=str)
     args = parser.parse_args()
     device_lp = 'cuda:'+str(args.cuda)
     loss_fn_alex = lpips.LPIPS(net='alex')
@@ -52,7 +53,9 @@ def main():
 
     # setup folder and path
     folder, save_dir, border, window_size = setup(args)
+    save_dir = os.path.join('results', args.save_name)
     os.makedirs(save_dir, exist_ok=True)
+    print(f"Task: {args.save_name}")
     test_results = OrderedDict()
     test_results['psnr'] = []
     test_results['ssim'] = []
@@ -195,7 +198,7 @@ def define_model(args):
 
     pretrained_model = torch.load(args.model_path)
     model.load_state_dict(pretrained_model[param_key_g] if param_key_g in pretrained_model.keys() else pretrained_model,
-                          strict=True)
+                          strict=False)
     return model
 
 
